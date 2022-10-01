@@ -17,7 +17,7 @@ namespace AreaCalc
         public Triangle(double a, double b, double c)
         {
             if (a <= 0 && b <= 0 && c <= 0)
-                throw new Exception("Invalid sides");
+                throw new ArgumentException("Invalid sides", nameof(a));
             else if (a <= 0)
                 throw new ArgumentException("Invalid side", nameof(a));
             else if (b <= 0)
